@@ -75,7 +75,7 @@ try {
     Write-Host "Running Smoke Tests"
     Push-Location $PSScriptRoot
     
-    dotnet test .\ImageFunction.SmokeTests.csproj -v n /p:Framework=$TargetFramework
+    dotnet test .\ImageFunction.SmokeTests.csproj -v diag /p:Framework=$TargetFramework
 
     if (!$?)
     {
